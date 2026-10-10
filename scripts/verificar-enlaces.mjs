@@ -104,11 +104,18 @@ for (const archivo of readdirSync(RAIZ).filter((f) => f.endsWith('.html'))) {
   // Avisos de publicación (solo fallan con --estricto)
   for (const m of html.matchAll(/\[PENDIENTE\][^<]*/g)) pendientes.push(`${archivo}: ${m[0].trim()}`);
 }
-for (const f of ['index.html', 'robots.txt', 'sitemap.xml']) {
-  if (existsSync(join(RAIZ, f)) && readFileSync(join(RAIZ, f), 'utf8').includes('generadores.electrotecniacyc.com'))
-    pendientes.push(`${f}: usa generadores.electrotecniacyc.com; confirmar el subdominio final`);
+// Dominio: toda URL absoluta propia debe usar el origen que hoy posiciona en Google (https, sin www, sin subdominio)
+const ORIGEN = 'https://electrotecniacyc.com';
+{
+  const idx = readFileSync(join(RAIZ, 'index.html'), 'utf8');
+  const canonico = (idx.match(/<link rel="canonical" href="([^"]+)"/) || [])[1];
+  if (canonico !== `${ORIGEN}/`) errores.push(`index.html: el canonical debe ser ${ORIGEN}/ (hoy: ${canonico ?? 'no existe'})`);
+  for (const f of ['index.html', 'robots.txt', 'sitemap.xml']) {
+    const texto = readFileSync(join(RAIZ, f), 'utf8');
+    for (const u of texto.match(/https?:\/\/[^\s"'<>]+/g) || [])
+      if (/electrotecniacyc\.com/i.test(u) && u !== ORIGEN && !u.startsWith(`${ORIGEN}/`)) errores.push(`${f}: URL con otro origen "${u}" (debe ser ${ORIGEN})`);
+  }
 }
-if (!/rel="canonical"/.test(readFileSync(join(RAIZ, 'index.html'), 'utf8'))) pendientes.push('index.html: falta <link rel="canonical"> (se agrega con el dominio final)');
 
 console.log(`Revisado: ${totalTel} tel:, ${totalWa} WhatsApp, ${totalAncla} anclas internas, ${totalImg} imágenes, ${totalSrcset} archivos de srcset.`);
 if (pendientes.length) {

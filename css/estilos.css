@@ -51,6 +51,7 @@ h1{font-size:clamp(34px,6.4vw,66px);line-height:1.02;font-weight:900;text-transf
 .ctas{display:flex;gap:14px;flex-wrap:wrap}
 .nota{font-size:14px;color:var(--tenue);margin-top:22px}
 .nota b{color:var(--amarillo)}
+.eyebrow{display:block;max-width:640px;margin-bottom:var(--e2);font-size:clamp(13px,1.5vw,16px);font-weight:800;line-height:1.35;letter-spacing:.6px;color:var(--tenue)}
 .hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:var(--e5);align-items:center}
 .hero-grid h1{font-size:clamp(34px,4.7vw,60px)}
 .hero-grid .gran-tel{font-size:clamp(52px,7vw,84px)}
@@ -132,11 +133,15 @@ h2 .y{color:var(--amarillo)}
 details{background:var(--panel);border:1px solid var(--linea);padding:18px 22px;margin-bottom:var(--e1)}
 summary{font-weight:800;cursor:pointer;text-transform:uppercase;font-size:15px}
 .faq-p{margin-top:10px;color:var(--tenue);font-size:15px}
+.faq-p a{font-weight:800;text-decoration:underline;text-underline-offset:3px}
 
 /* Otros servicios y pie */
 .otros{background:var(--panel);border-top:1px solid var(--linea);border-bottom:1px solid var(--linea);padding:var(--e4) 0}
 .otros h2{font-size:24px;margin-bottom:var(--e2)}
 .otros p{color:var(--tenue);max-width:760px;margin-bottom:var(--e2)}
+.otros ul{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--e1) var(--e3);max-width:760px;margin-bottom:var(--e2)}
+.otros li{position:relative;padding-left:20px;color:var(--tenue)}
+.otros li:before{content:"▸";position:absolute;left:0;color:var(--amarillo)}
 .otros a{color:var(--amarillo);font-weight:800;text-transform:uppercase;border-bottom:2px solid currentColor}
 footer{padding:var(--e4) 0;color:var(--tenue);font-size:14px}
 footer b{color:var(--texto)}
@@ -167,6 +172,7 @@ footer a{color:var(--amarillo);font-weight:800;text-decoration:underline;text-un
   .stats li:nth-child(2){border-right:0}
   .stats li:nth-child(-n+2){border-bottom:1px solid var(--linea)}
   .tres{grid-template-columns:1fr}
+  .otros ul{grid-template-columns:1fr}
   section{padding:var(--e5) 0}
   .hero{padding:48px 0 56px}
   .intro{font-size:16px}

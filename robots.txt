@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# PENDIENTE: reemplazar por el subdominio final cuando se confirme.
-Sitemap: https://generadores.electrotecniacyc.com/sitemap.xml
+Sitemap: https://electrotecniacyc.com/sitemap.xml

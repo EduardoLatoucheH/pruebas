@@ -1,5 +1,9 @@
 {
   "cleanUrls": true,
+  "redirects": [
+    { "source": "/sitemap_index.xml", "destination": "/sitemap.xml", "permanent": true },
+    { "source": "/:path(.*)", "has": [{ "type": "host", "value": "www.electrotecniacyc.com" }], "destination": "https://electrotecniacyc.com/:path", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/(.*)",

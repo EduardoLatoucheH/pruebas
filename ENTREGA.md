@@ -1,40 +1,69 @@
 # Entrega — Landing Electrotecnia C&C (10/10/2026)
 
-## Cómo verla
+## Comandos
 ```bash
 cd ~/Desktop/electrotecnia-landing
-python3 -m http.server 4173 --bind 127.0.0.1   # y abrir http://127.0.0.1:4173
-npm run verificar          # enlaces + contraste (avisa de los [PENDIENTE] y del dominio por confirmar)
-npm run publicar           # igual, pero FALLA si queda algún pendiente: correrlo justo antes de desplegar
-npm run fotos              # re-optimiza fotos-originales/ -> assets/fotos/
-npm run marca              # logo circular + imagen para compartir
+python3 -m http.server 4173 --bind 127.0.0.1   # abrir http://127.0.0.1:4173
+npm run verificar     # enlaces + contraste + lenguaje (avisa de lo pendiente)
+npm run publicar      # igual, pero FALLA si queda algún [PENDIENTE]: correrlo justo antes de desplegar
+npm run lenguaje      # solo la auditoría de lenguaje
+npm run fotos         # re-optimiza fotos-originales/ -> assets/fotos/
+npm run marca         # logo circular + imagen para compartir
 npm run picture -- <clave> "<alt>" "<sizes>" [--eager]   # imprime el <picture> de una foto
 ```
 
+## Qué dice la página sobre la inspección (confirmado por el dueño)
+Cuesta ₡35.000 + IVA y se incluye en la factura electrónica. El alcance depende del equipo y de las condiciones de cada caso. Fuera de San José se cobra la visita, y su costo se acuerda antes de ir.
+
 ## Pendientes para el dueño
-1. **Barco y sistema Schiller: retirado por ahora** (decisión del 10/10/2026: el foco es generadores y sistemas contra incendios). El texto, la tarjeta y la foto están en el commit "version inicial"; se recuperan con `git show` o `git revert`. La foto original quedó en `fotos-originales/guardadas/`. Si se retoma, hay que confirmar: qué es el sistema Schiller, qué incluye el servicio, tipos de embarcación, dónde atienden, si es a bordo o en taller y qué marcas.
-2. **Años de experiencia:** el sitio dice 40, pero el anuncio viejo de aires dice "desde 1989" (unos 37). Confirmar cuál va.
+1. **Barco y sistema Schiller: retirado por ahora** (decisión del 10/10/2026). El texto, la tarjeta y la foto están en el commit "version inicial" (`git show 899b304`). La foto original quedó en `fotos-originales/guardadas/`. Si se retoma: qué es el sistema Schiller, qué incluye, tipos de embarcación, dónde atienden, a bordo o en taller, qué marcas.
+2. **Años de experiencia:** el texto dice "40 años" y la cifra dice "+40". El anuncio viejo de aires dice "desde 1989" (unos 37). Confirmar cuál va y dejar el mismo en los dos lugares.
 3. **Logo de Generac:** no se usa hasta confirmar si es distribuidor o servicio autorizado.
-4. **Contacto (ya en la página):** correo info@electrotecniacyc.com y "Ubicados en Hatillo, San José". Aparecen en Google Maps como "Electrotecnia C&C"; el botón del pie abre una búsqueda de Maps con ese nombre, así que conviene probarlo desde un celular. **Falta** la dirección exacta (calle y número) y las coordenadas del punto para el `geo` del JSON-LD; si me mandás el enlace de "Compartir" del punto, lo pongo.
+4. **Dirección exacta y coordenadas:** la página ya dice "Hatillo, San José" y enlaza a Google Maps con una búsqueda por nombre (probar desde un celular que abra el negocio). Falta calle/número y el punto exacto para el `geo` del JSON-LD: con el enlace de "Compartir" del punto se agrega.
 5. **Atención 24/7 o de emergencia:** la página solo promete lunes a viernes 9:00–17:00.
-6. **Qué incluye la inspección y diagnóstico** (₡35.000 + IVA): hoy dice "por confirmar".
-7. **Fotos:** hay 7 (generadores 3, incendios 1, trabajos 3). Idealmente, 2 más de incendios y 4 más de trabajos, todas horizontales y de al menos 1600 px.
-   Las de generador azul, generador amarillo y bomba traían EXIF (posible GPS): ya se quitó de las copias publicadas.
-8. **Permiso para mostrar** esos equipos y cuartos de máquinas (se ven marcas Olympian, Kohler/SDMO, CAT, Clarke y Greegoo; no se afirma ninguna autorización).
-9. **Logo:** pedir el archivo original o vectorial y los colores exactos. El archivo recibido mide 920×1004 y el círculo venía estirado; se corrigió al recortar.
-   También confirmar si se quiere usar su leyenda "Ingeniería eléctrica y soluciones tecnológicas".
-10. **Anuncio viejo de forense:** lista servicios de espionaje que NO se copiaron. Confirmar qué se publica de cómputo forense.
-11. **Subdominio final:** hoy figura `generadores.electrotecniacyc.com` en `og:image`, `robots.txt` y `sitemap.xml`. Cambiarlo ahí si es otro, y agregar `canonical` y `og:url`.
+6. **Fotos:** hay 7 (generadores 3, incendios 1, trabajos 3). Idealmente, 2 más de incendios y 4 más de trabajos, horizontales y de al menos 1600 px.
+7. **Permiso para mostrar** esos equipos y cuartos de máquinas (se ven marcas Olympian, Kohler/SDMO, CAT, Clarke y Greegoo; no se afirma ninguna autorización).
+8. **Logo:** pedir el archivo original o vectorial y los colores exactos (el recibido venía estirado, 920×1004; se corrigió al recortar).
+9. **Cómputo forense:** el anuncio viejo lista servicios de espionaje que NO se copiaron. Confirmar qué se publica.
 
-## Publicar sin tocar su WordPress
-1. `git add -A && git commit` en este proyecto (no hay push hecho). `fotos-originales/`, `sitio-viejo/` y `node_modules/` están en `.gitignore`.
-2. Vercel: proyecto nuevo, Framework "Other", sin comando de build, directorio de salida la raíz. Si el repo contiene varias carpetas, poner **Root Directory** en esta.
-3. Dominio: agregar `generadores.electrotecniacyc.com` en Vercel y crear en el DNS de su dominio **un solo CNAME** con el valor exacto que Vercel muestre. No se toca el WordPress.
-4. **Plan de Vercel:** el Hobby no es para uso comercial; un sitio de cliente corresponde al plan **Pro**.
-5. Google Business: mismo nombre y mismo teléfono (+506 8707 1228) que en la página. Poner el subdominio como sitio web.
+## Dominio: tiene que ser electrotecniacyc.com
+La página ya está preparada para ese dominio (canonical, `og:url`, `og:image`, `robots.txt`, `sitemap.xml` y JSON-LD usan `https://electrotecniacyc.com/`; el `www` redirige al dominio sin `www`). `npm run verificar` falla si alguna URL propia usa otro origen.
 
-## Conservar el posicionamiento
-- El sitio actual tiene una sola URL real (`/`) y el contacto en `/?page_id=1550`. El título y el H1 nuevos conservan sus frases clave ("generadores eléctricos y sistemas contra incendios en Costa Rica", "plantas eléctricas").
-- Un subdominio se considera un sitio distinto: no hereda automáticamente el posicionamiento del dominio principal. Conviene que el sitio actual enlace al subdominio.
-- Si algún día reemplazan el WordPress por esta página: mantener las mismas URLs y poner redirecciones **301** de cualquier URL vieja a la nueva.
-- Agregar el subdominio en Search Console y enviar el `sitemap.xml`.
+### Lo que encontré en el sitio actual (verificado el 10/10/2026)
+- WordPress con Yoast. Canonical: `https://electrotecniacyc.com/` (https, sin `www`); `www` responde 301 a ese.
+- Título: "Electrotecnia C&C - Mantenimiento plantas electricas San José Costa Rica". Se conserva igual, solo con tilde en "eléctricas".
+- Mapa del sitio: `/sitemap_index.xml`. Contacto: `/?page_id=1550`.
+- El DNS está en **InMotion Hosting** (`ns1/ns2.inmotionhosting.com`). Sitio y correo viven en `70.39.248.148`.
+- **El correo depende del dominio:** el MX es `electrotecniacyc.com` (el propio dominio) y `mail.electrotecniacyc.com` es un CNAME al dominio. Si el dominio se apunta a Vercel sin tocar eso, **`info@electrotecniacyc.com` deja de recibir correo**.
+- `webmail`, `cpanel`, `ftp`, `autodiscover`, `autoconfig` y `whm` tienen su propia IP: no se afectan. El SPF ya autoriza `ip4:70.39.248.148` de forma explícita.
+
+### Orden de salida (no saltarse pasos)
+0. **Respaldos:** copia completa de WordPress y del correo desde cPanel. **No cancelar el hosting de InMotion:** el correo vive ahí.
+1. **Línea base en Search Console:** exportar las páginas indexadas y las consultas principales de los últimos 16 meses. Anotar la posición de las 10 consultas más importantes.
+2. **Desplegar en Vercel Pro** con la URL provisional `*.vercel.app` y probar ahí: celular, enlaces, `npm run publicar`.
+3. **DNS en InMotion. NO cambiar los nameservers**, solo registros:
+   - a) `mail`: cambiar de CNAME a registro **A** con `70.39.248.148`.
+   - b) MX: cambiar a `mail.electrotecniacyc.com` con prioridad 0 (quitar el que apunta al dominio).
+   - c) Esperar el TTL y probar **enviar y recibir** correo a `info@`, y que el webmail siga abriendo.
+   - d) Recién ahí, el dominio (`@`): registro **A** con el valor exacto que Vercel muestre, y `www` como CNAME al valor que Vercel muestre.
+4. **En Vercel:** agregar `electrotecniacyc.com` como dominio principal y `www.electrotecniacyc.com` redirigiendo al principal. El HTTPS lo emite Vercel.
+5. **Verificar:** `https://electrotecniacyc.com/`, `www` con 301 al dominio, `/robots.txt`, `/sitemap.xml`, `/sitemap_index.xml` con 301 a `/sitemap.xml`, imagen para compartir (Debugger de Facebook), Rich Results Test.
+6. **Search Console:** inspeccionar la URL y solicitar indexación; enviar `sitemap.xml`.
+7. **Monitorear 2 a 4 semanas** (posiciones, impresiones, errores de cobertura). No cambiar título ni H1 en ese lapso.
+
+### Riesgos para Google (honestos)
+- Lo que más protege: mismo dominio, misma URL principal (`/`), mismo canonical, mismo título, y la misma frase del H1 y de la descripción del sitio actual.
+- Inevitable: WordPress sale, el texto cambia y la imagen para compartir es nueva. Las URLs con parámetros (`/?page_id=1550`, `?feed=…`) y las imágenes de `wp-content/uploads/…` dejan de existir; las imágenes ya indexadas en Google Imágenes se pierden.
+- **Otros servicios:** cómputo forense, laptops, compresores y aire acondicionado pasaron de secciones del sitio a una lista corta. Si hoy traen visitas, esas consultas pueden bajar. Revisar en Search Console antes de decidir si hacen falta páginas aparte.
+- **Redirección del contacto:** no la puse todavía porque Vercel puede conservar el parámetro de la URL y causar un bucle. Probarla primero en la URL provisional y, si funciona, agregar a `redirects` en `vercel.json`:
+  `{ "source": "/", "has": [{ "type": "query", "key": "page_id", "value": "1550" }], "destination": "/#contacto", "permanent": true }`
+  Probar `https://<provisional>.vercel.app/?page_id=1550`; si da bucle, no usarla.
+- **Google Business Profile:** mismo nombre y mismo teléfono (+506 8707 1228). El sitio web ya es `electrotecniacyc.com`, no cambia.
+- **Plan de Vercel:** el Hobby no es para uso comercial; un sitio de cliente va en **Pro**.
+
+## Auditoría de lenguaje
+- **Criterio:** compra B2B, urgente y de riesgo. Trato de **usted**, frases cortas (8,7 palabras en promedio, la más larga de 22), botones con verbos en infinitivo (Llamar, Escribir, Solicitar), y nada que no esté confirmado.
+- **Conservado de lo que ya posiciona:** el título, la primera frase de la descripción, la frase del H1 (ahora como línea superior dentro del H1), "plantas eléctricas" y los nombres de los otros servicios.
+- **Corregido:** "Llamá al" (vos) en la descripción para compartir; la descripción pasó de 175 a 144 caracteres para que no se corte; H1 y "plantas eléctricas" que faltaban; el texto de otros servicios ahora es una lista.
+- **No se escribió:** garantías, 24/7, "inmediato", certificaciones, marcas autorizadas ni superlativos. El sitio actual dice "soluciones técnicas inmediatas" y "garantizan su total satisfacción"; no se copió.
+- **Repetible:** `npm run lenguaje` revisa 12 reglas (título, descripción, H1, registro, afirmaciones, precio, palabras clave, terminología, WhatsApp, legibilidad, idioma).

@@ -11,7 +11,8 @@
     "verificar-enlaces": "node scripts/verificar-enlaces.mjs",
     "publicar": "node scripts/verificar-enlaces.mjs --estricto",
     "contraste": "node scripts/contraste.mjs",
-    "verificar": "npm run verificar-enlaces && npm run contraste",
+    "lenguaje": "node scripts/lenguaje.mjs",
+    "verificar": "npm run verificar-enlaces && npm run contraste && npm run lenguaje",
     "preview": "npx --yes serve@14.2.4 -l 4173 ."
   },
   "devDependencies": {

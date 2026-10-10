@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- PENDIENTE: reemplazar el dominio por el subdominio final cuando se confirme. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://generadores.electrotecniacyc.com/</loc>
+    <loc>https://electrotecniacyc.com/</loc>
     <lastmod>2026-10-10</lastmod>
   </url>
 </urlset>
