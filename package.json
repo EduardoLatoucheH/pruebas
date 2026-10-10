@@ -1,0 +1,20 @@
+{
+  "name": "electrotecnia-landing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing de Electrotecnia C&C: generadores, prevención de incendios, barco y Schiller",
+  "type": "module",
+  "scripts": {
+    "fotos": "node scripts/fotos.mjs",
+    "marca": "node scripts/marca.mjs",
+    "picture": "node scripts/picture.mjs",
+    "verificar-enlaces": "node scripts/verificar-enlaces.mjs",
+    "publicar": "node scripts/verificar-enlaces.mjs --estricto",
+    "contraste": "node scripts/contraste.mjs",
+    "verificar": "npm run verificar-enlaces && npm run contraste",
+    "preview": "npx --yes serve@14.2.4 -l 4173 ."
+  },
+  "devDependencies": {
+    "sharp": "^0.35.5"
+  }
+}

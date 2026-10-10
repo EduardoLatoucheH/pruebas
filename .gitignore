@@ -1,0 +1,5 @@
+node_modules/
+fotos-originales/
+sitio-viejo/
+.DS_Store
+*.log

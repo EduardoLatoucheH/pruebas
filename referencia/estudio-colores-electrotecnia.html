@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es-CR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Estudio de color — Electrotecnia C&C</title>
+<style>
+  :root{--ink:#161b26;--mut:#5b6678;--line:#e3e7ee;--bg:#f6f7fa;--card:#fff}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.55}
+  .wrap{max-width:1040px;margin:0 auto;padding:36px 22px 80px}
+  h1{font-size:30px;line-height:1.15;margin-bottom:6px}
+  .sub{color:var(--mut);margin-bottom:30px}
+  h2{font-size:21px;margin:42px 0 12px;padding-top:6px;border-top:2px solid var(--ink)}
+  h3{font-size:16px;margin:18px 0 6px}
+  p{margin-bottom:10px;max-width:780px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin-bottom:14px}
+  .g2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .g3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .sw{display:flex;gap:12px;align-items:flex-start;margin-bottom:12px}
+  .chip{flex:0 0 54px;height:54px;border-radius:10px;border:1px solid rgba(0,0,0,.12)}
+  .sw b{display:block;font-size:14px}.sw span{font-size:13px;color:var(--mut)}
+  code{background:#eef1f6;padding:1px 6px;border-radius:5px;font-size:12.5px}
+  table{width:100%;border-collapse:collapse;font-size:14px;background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line)}
+  th{background:#eef1f6;font-size:12px;text-transform:uppercase;letter-spacing:.4px}
+  .ok{color:#14803c;font-weight:700}.mal{color:#c62828;font-weight:700}.med{color:#a16200;font-weight:700}
+  .mock{border-radius:10px;overflow:hidden;border:1px solid var(--line);font-size:12px}
+  .mock .top{padding:8px 12px;font-weight:800;letter-spacing:.3px}
+  .mock .hero{padding:16px 14px 18px}
+  .mock .hero b{display:block;font-size:17px;line-height:1.1;text-transform:uppercase;margin-bottom:8px}
+  .mock .tel{font-size:26px;font-weight:900;line-height:1;margin:6px 0 10px}
+  .mock .btns{display:flex;gap:6px}
+  .mock .btns i{font-style:normal;font-weight:800;padding:7px 9px;font-size:11px;text-transform:uppercase;border-radius:2px}
+  .tag{display:inline-block;font-size:11px;font-weight:800;padding:3px 9px;border-radius:99px;text-transform:uppercase;letter-spacing:.4px}
+  .rec{border:2px solid #14803c;background:#f2fbf5}
+  ul{margin:4px 0 10px 20px}li{margin-bottom:4px;max-width:760px}
+  @media(max-width:760px){.g2,.g3{grid-template-columns:1fr}}
+</style>
+</head>
+<body><div class="wrap">
+
+<h1>Estudio de color — Electrotecnia C&amp;C</h1>
+<p class="sub">Generadores y sistemas contra incendios · Costa Rica · Preparado por AutomatIA (08/10/2026). Los ratios de contraste están calculados con la fórmula WCAG; la psicología del color es orientativa, no una ley.</p>
+
+<h2>1. Qué tiene que lograr el color en esta página</h2>
+<div class="card">
+  <p>Quien entra a esta página casi nunca está "navegando": o se le fue la luz, o falló un equipo, o un administrador tiene que cumplir una inspección. Es una compra <b>B2B, urgente y de riesgo</b>. Eso ordena los criterios, en este orden:</p>
+  <ul>
+    <li><b>Que el teléfono y el botón se vean primero.</b> Si el color no guía el ojo al contacto, falló.</li>
+    <li><b>Confianza técnica.</b> Se confía un equipo crítico a quien se ve serio, ordenado y con experiencia (40 años).</li>
+    <li><b>Legibilidad en celular, a pleno sol o con apuro.</b> Contraste alto, textos grandes.</li>
+    <li><b>Diferenciar los dos negocios</b> (generadores vs. incendios) sin que parezcan dos empresas.</li>
+    <li><b>Coherencia con la marca y con lo que produce la agencia:</b> logo del cliente (azul y "línea amarilla"), anuncios, posters y reels de Pluggs, perfil de Instagram.</li>
+  </ul>
+</div>
+
+<h2>2. El papel de cada color</h2>
+<div class="g2">
+  <div class="card">
+    <div class="sw"><div class="chip" style="background:#0b1220"></div><div><b>Azul noche / grafito</b><span>Seriedad, técnica, "esto lo hace gente que sabe". Es el color de confianza en B2B industrial. Más cálido y menos agresivo que el negro puro; mantiene el impacto.</span></div></div>
+    <div class="sw"><div class="chip" style="background:#ffc400"></div><div><b>Amarillo de seguridad</b><span>Atención y precaución (señalización eléctrica e industrial). Es el que más rápido atrapa el ojo. Ya está en el logo del cliente. Solo para resaltar y para el botón de llamar; nunca como texto sobre fondo blanco (contraste 1.6:1).</span></div></div>
+  </div>
+  <div class="card">
+    <div class="sw"><div class="chip" style="background:#ff3b30"></div><div><b>Rojo</b><span>Fuego, emergencia, alarma. Pertenece a incendios (el equipo real es rojo). Reservarlo para ese servicio: si aparece en todo, pierde fuerza y puede leerse como "peligro/error" en las partes de generadores.</span></div></div>
+    <div class="sw"><div class="chip" style="background:#25d366"></div><div><b>Verde WhatsApp</b><span>La gente ya lo asocia con "escribir ahora". Solo en botones de WhatsApp, nunca decorativo. Rojo y verde nunca juntos como señal (daltonismo): se distinguen por texto y posición.</span></div></div>
+  </div>
+</div>
+
+<h2>3. Tres direcciones posibles</h2>
+<div class="g3">
+  <div>
+    <div class="mock" style="background:#0b0d12;color:#eef1f6">
+      <div class="top" style="background:#ffc400;color:#111;text-align:center">⚡ Atención en todo CR</div>
+      <div class="hero"><b>Generadores <span style="color:#ffc400">que arrancan.</span><br><span style="color:#ff3b30">Prevención de incendios.</span></b><div class="tel" style="color:#ffc400">8707-1228</div><div class="btns"><i style="background:#ffc400;color:#111">Llamar</i><i style="background:#25d366;color:#06240f">WhatsApp</i></div></div>
+    </div>
+    <h3>A · Negro industrial <span class="tag" style="background:#eef1f6">la actual (v2)</span></h3>
+    <p style="font-size:14px">Máximo impacto y urgencia. Riesgo: negro + amarillo + rojo se lee "alarma"; puede sentirse menos corporativo para hospitales, hoteles o edificios.</p>
+  </div>
+  <div>
+    <div class="mock" style="background:#0b1220;color:#eef1f6">
+      <div class="top" style="background:#ffc400;color:#111;text-align:center">⚡ Atención en todo CR</div>
+      <div class="hero"><b>Generadores <span style="color:#ffc400">que arrancan.</span><br><span style="color:#ff5a4f">Prevención de incendios.</span></b><div class="tel" style="color:#ffc400">8707-1228</div><div class="btns"><i style="background:#ffc400;color:#111">Llamar</i><i style="background:#25d366;color:#06240f">WhatsApp</i></div></div>
+      <div style="background:#f4f6f9;color:#1b2430;padding:10px 14px;font-weight:700">Secciones de lectura en claro ▸</div>
+    </div>
+    <h3>B · Azul noche + secciones claras <span class="tag" style="background:#d9f4e2;color:#14803c">recomendada</span></h3>
+    <p style="font-size:14px">Mantiene el golpe del hero oscuro, pero con azul de confianza y bloques claros para leer servicios y preguntas. Se siente profesional sin perder urgencia.</p>
+  </div>
+  <div>
+    <div class="mock" style="background:#fff;color:#1b2430">
+      <div class="top" style="background:#0b2545;color:#fff;text-align:center">Atención en todo CR</div>
+      <div class="hero"><b>Generadores <span style="color:#0b2545">que arrancan.</span><br><span style="color:#c62828">Prevención de incendios.</span></b><div class="tel" style="color:#0b2545">8707-1228</div><div class="btns"><i style="background:#ffc400;color:#111">Llamar</i><i style="background:#25d366;color:#06240f">WhatsApp</i></div></div>
+    </div>
+    <h3>C · Claro corporativo</h3>
+    <p style="font-size:14px">La más "institucional" y limpia. Riesgo: menos fuerza visual para una compra de urgencia, y el amarillo pierde protagonismo (no sirve como texto sobre blanco).</p>
+  </div>
+</div>
+
+<h2>4. Contraste real (WCAG)</h2>
+<p>AA exige 4.5:1 para texto normal y 3:1 para texto grande (≥24 px, o ≥19 px en negrita).</p>
+<table>
+  <tr><th>Combinación</th><th>Ratio</th><th>Veredicto</th></tr>
+  <tr><td>Amarillo <code>#FFC400</code> sobre azul noche <code>#0B1220</code></td><td>11.7:1</td><td class="ok">Excelente</td></tr>
+  <tr><td>Texto negro <code>#111</code> sobre amarillo (botón de llamar)</td><td>11.8:1</td><td class="ok">Excelente</td></tr>
+  <tr><td>Blanco sobre azul noche</td><td>18.7:1</td><td class="ok">Excelente</td></tr>
+  <tr><td>Gris tenue <code>#9AA4B5</code> sobre azul noche</td><td>7.5:1</td><td class="ok">Bien</td></tr>
+  <tr><td>Texto verde-oscuro <code>#06240F</code> sobre verde WhatsApp</td><td>8.4:1</td><td class="ok">Bien</td></tr>
+  <tr><td>Rojo <code>#FF3B30</code> sobre negro <code>#0B0D12</code></td><td>5.5:1</td><td class="ok">Pasa AA</td></tr>
+  <tr><td>Rojo <code>#E5322D</code> sobre azul noche</td><td>4.3:1</td><td class="med">Solo para títulos grandes</td></tr>
+  <tr><td>Rojo claro <code>#FF5A4F</code> sobre azul noche</td><td>6.1:1</td><td class="ok">Pasa AA (usar este con el azul)</td></tr>
+  <tr><td>Blanco sobre rojo <code>#E5322D</code> (botón rojo)</td><td>4.35:1</td><td class="med">Justo por debajo; usar texto grande y en negrita</td></tr>
+  <tr><td>Azul marino <code>#0B2545</code> sobre blanco</td><td>15.4:1</td><td class="ok">Excelente</td></tr>
+  <tr><td>Amarillo <code>#FFC400</code> sobre blanco</td><td>1.6:1</td><td class="mal">No usar como texto</td></tr>
+  <tr><td>Gris <code>#56637A</code> sobre gris claro <code>#F4F6F9</code></td><td>5.6:1</td><td class="ok">Pasa AA</td></tr>
+</table>
+<p style="margin-top:10px;font-size:14px;color:var(--mut)">Hallazgo para la v2 actual: con el azul noche hay que subir el rojo a <code>#FF5A4F</code> para texto pequeño (por ejemplo "Solicitar cotización").</p>
+
+<h2>5. Recomendación: dirección B</h2>
+<div class="card rec">
+  <div class="g2">
+    <div>
+      <div class="sw"><div class="chip" style="background:#0b1220"></div><div><b>Fondo principal · <code>#0B1220</code></b><span>~60% de la página (hero, banda de servicios, pie)</span></div></div>
+      <div class="sw"><div class="chip" style="background:#f4f6f9"></div><div><b>Secciones de lectura · <code>#F4F6F9</code></b><span>~25% (preguntas frecuentes, cómo trabajamos). Texto <code>#1B2430</code></span></div></div>
+      <div class="sw"><div class="chip" style="background:#ffc400"></div><div><b>Acento principal · <code>#FFC400</code></b><span>~10%: teléfono, botón Llamar, palabras clave, franja de peligro</span></div></div>
+    </div>
+    <div>
+      <div class="sw"><div class="chip" style="background:#ff5a4f"></div><div><b>Incendios · <code>#FF5A4F</code> (texto) / <code>#E5322D</code> (relleno)</b><span>Solo en la tarjeta y la foto de incendios y en una palabra del titular</span></div></div>
+      <div class="sw"><div class="chip" style="background:#25d366"></div><div><b>WhatsApp · <code>#25D366</code></b><span>Solo en botones de WhatsApp</span></div></div>
+      <div class="sw"><div class="chip" style="background:#9aa4b5"></div><div><b>Texto secundario · <code>#9AA4B5</code></b><span>Subtítulos y notas sobre fondo oscuro</span></div></div>
+    </div>
+  </div>
+  <p style="margin-top:8px"><b>Por qué:</b> conserva la fuerza del estilo que te gustó (oscuro, amarillo, grande) y le suma lo que pide una compra B2B: azul de confianza y bloques claros donde se lee con calma. Todas las combinaciones de texto pasan AA.</p>
+</div>
+
+<h2>6. Reglas de uso (para que se mantenga consistente)</h2>
+<ul>
+  <li><b>Un solo color por función:</b> amarillo = resaltar y llamar; rojo = incendios; verde = WhatsApp. Si un color hace dos cosas, deja de guiar.</li>
+  <li><b>Regla 60-30-10:</b> 60% fondo, 30% secundarios (claro y gris), 10% acentos. Más amarillo que eso cansa y baja la urgencia.</li>
+  <li><b>El teléfono es el elemento de mayor contraste de la página.</b> Si algo compite con él, se baja.</li>
+  <li><b>Fotos reales con color natural:</b> el equipo azul (generador) y el rojo (bomba) ya traen el código de color de cada servicio. No filtrarlas ni tintarlas.</li>
+  <li><b>Sin degradados vistosos ni sombras pesadas:</b> en industrial, lo plano y sólido se lee más serio.</li>
+</ul>
+
+<h2>7. Lo que toma en cuenta la agencia (checklist)</h2>
+<table>
+  <tr><th>Criterio</th><th>Qué hacer con Electrotecnia</th></tr>
+  <tr><td>Coherencia de marca</td><td>El logo actual usa azul y amarillo. Confirmar con el dueño los colores exactos del logo y que no choquen con el rojo de incendios.</td></tr>
+  <tr><td>Coherencia entre canales</td><td>Usar la misma paleta en la web, anuncios de Meta/Google, posters y reels (Pluggs) y el perfil de Instagram. Lo mismo en todo = recordación.</td></tr>
+  <tr><td>Contexto del mercado</td><td>Revisar 3–5 competidores locales (generadores y contra incendios) y evitar parecerse al más común. No tengo ese relevamiento hecho; conviene hacerlo.</td></tr>
+  <tr><td>Accesibilidad</td><td>Contraste AA en todo el texto, no depender solo del color (rojo/verde llevan etiqueta y texto), botones grandes en celular.</td></tr>
+  <tr><td>Dispositivos</td><td>Probar en celular con brillo medio y al aire libre: con sol directo los contrastes bajos se pierden primero.</td></tr>
+  <tr><td>Cultura y señales</td><td>El rojo (emergencia/fuego) y el amarillo (precaución) son códigos de señalización de seguridad muy extendidos, también en Costa Rica: funcionan a favor.</td></tr>
+  <tr><td>Medir, no adivinar</td><td>Probar dos versiones del botón de llamar o del hero (A/B) con anuncios y comparar llamadas y clics en WhatsApp. El color "ganador" lo decide el cliente, no el gusto.</td></tr>
+  <tr><td>Rendimiento</td><td>Paleta simple = CSS liviano, carga rápida (ayuda al SEO local y a la conversión).</td></tr>
+</table>
+
+<p style="margin-top:22px;font-size:13px;color:var(--mut)">Nota: la asociación color-emoción (confianza, urgencia) es una guía de diseño ampliamente usada, pero varía por contexto y no sustituye medir con usuarios reales. No se incluyeron cifras de conversión porque no tengo datos propios del cliente.</p>
+
+</div></body>
+</html>

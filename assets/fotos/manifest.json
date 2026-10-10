@@ -1,0 +1,90 @@
+{
+  "generadores-cabina-azul": {
+    "grupo": "generadores",
+    "original": "cabina-azul.jpg",
+    "w": 1200,
+    "h": 1600,
+    "anchos": {
+      "480": 640,
+      "960": 1280,
+      "1200": 1600
+    }
+  },
+  "generadores-diesel-amarillo": {
+    "grupo": "generadores",
+    "original": "diesel-amarillo.jpg",
+    "w": 1600,
+    "h": 1200,
+    "anchos": {
+      "480": 360,
+      "960": 720,
+      "1600": 1200
+    }
+  },
+  "generadores-planta-grande": {
+    "grupo": "generadores",
+    "original": "planta-grande.jpg",
+    "w": 1600,
+    "h": 1200,
+    "anchos": {
+      "480": 360,
+      "960": 720,
+      "1600": 1200
+    }
+  },
+  "incendios-bomba-cuarto-maquinas": {
+    "grupo": "incendios",
+    "original": "bomba-cuarto-maquinas.jpg",
+    "w": 1600,
+    "h": 1200,
+    "anchos": {
+      "480": 360,
+      "960": 720,
+      "1600": 1200
+    }
+  },
+  "trabajos-culata-valvulas": {
+    "grupo": "trabajos",
+    "original": "culata-valvulas.jpg",
+    "w": 1200,
+    "h": 1600,
+    "anchos": {
+      "480": 640,
+      "960": 1280,
+      "1200": 1600
+    }
+  },
+  "trabajos-tablero-transferencia": {
+    "grupo": "trabajos",
+    "original": "tablero-transferencia.jpg",
+    "w": 1600,
+    "h": 1200,
+    "anchos": {
+      "480": 360,
+      "960": 720,
+      "1600": 1200
+    }
+  },
+  "trabajos-tableros-ats": {
+    "grupo": "trabajos",
+    "original": "tableros-ats.jpg",
+    "w": 1600,
+    "h": 1200,
+    "anchos": {
+      "480": 360,
+      "960": 720,
+      "1600": 1200
+    }
+  },
+  "barco-sala-maquinas": {
+    "grupo": "barco",
+    "original": "sala-maquinas.jpg",
+    "w": 1280,
+    "h": 960,
+    "anchos": {
+      "480": 360,
+      "960": 720,
+      "1280": 960
+    }
+  }
+}

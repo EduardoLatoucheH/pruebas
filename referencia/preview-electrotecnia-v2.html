@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es-CR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Electrotecnia C&amp;C — Generadores y sistemas contra incendios en Costa Rica</title>
+<meta name="description" content="Mantenimiento preventivo y reparación de generadores eléctricos, plantas de emergencia y sistemas contra incendios en todo Costa Rica. Inspección y diagnóstico ₡35.000 + IVA. Tel. 8707-1228.">
+<style>
+  /* Preview v2 (08/10/2026): estilo industrial oscuro. Amarillo = resaltar, rojo = incendios, verde = WhatsApp. */
+  /* Dirección B (estudio de color): azul noche + secciones claras. Rojo claro para texto sobre azul. */
+  .claro{background:#f4f6f9;color:#1b2430}
+  .claro h2{color:#0b2545}
+  .claro h2 .y{color:#0b2545;box-shadow:inset 0 -.38em 0 #ffc400}
+  .claro .intro,.claro .pv p,.claro .faq p{color:#4a5568}
+  .claro .pv,.claro details{background:#fff;border-color:#e1e6ee}
+  .claro summary{color:#0b2545}
+  :root{--bg:#0b2545;--panel:#13315c;--linea:#264a7c;--amarillo:#ffc400;--rojo:#ff6b60;--verde:#25d366;--texto:#eef1f6;--tenue:#b4bfd1}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--texto);font-family:Inter,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1124px;margin:0 auto;padding:0 24px}
+  .upper{text-transform:uppercase}
+
+  .topbar{background:var(--amarillo);color:#111;text-align:center;font-size:13px;font-weight:700;padding:8px 12px}
+  header{background:var(--bg);border-bottom:1px solid var(--linea);position:sticky;top:0;z-index:20}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;height:70px}
+  .logo{font-weight:900;letter-spacing:.5px;font-size:15px;text-transform:uppercase}
+  .logo span{color:var(--amarillo)}
+  .tel-h{border:2px solid var(--amarillo);color:var(--amarillo);font-weight:800;padding:10px 20px;font-size:15px}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:18px 28px;font-weight:900;font-size:15px;text-transform:uppercase;letter-spacing:.3px;border-radius:2px;transition:transform .12s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-y{background:var(--amarillo);color:#111}
+  .btn-w{background:var(--verde);color:#06240f}
+  .btn-k{background:#111;color:var(--amarillo)}
+
+  .hero{position:relative;padding:72px 0 80px;background:
+    repeating-linear-gradient(135deg,rgba(255,255,255,.025) 0 18px,transparent 18px 52px),var(--bg)}
+  h1{font-size:clamp(34px,6.4vw,66px);line-height:1.02;font-weight:900;text-transform:uppercase;letter-spacing:-1px;max-width:860px}
+  h1 .y{color:var(--amarillo)} h1 .r{color:var(--rojo)}
+  .hero p.lead{color:var(--tenue);font-size:19px;max-width:620px;margin:22px 0 30px}
+  .llama{font-size:15px;font-weight:800;color:var(--tenue);text-transform:uppercase;letter-spacing:.5px}
+  .gran-tel{display:block;font-size:clamp(52px,9.5vw,92px);font-weight:900;color:var(--amarillo);line-height:1;letter-spacing:-2px;margin:6px 0 26px}
+  .ctas{display:flex;gap:14px;flex-wrap:wrap}
+  .nota{font-size:14px;color:var(--tenue);margin-top:22px}
+  .nota b{color:var(--amarillo)}
+
+  .peligro{height:12px;background:repeating-linear-gradient(135deg,var(--amarillo) 0 18px,#111 18px 36px)}
+  .stats{background:var(--panel);border-bottom:1px solid var(--linea)}
+  .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);padding:0}
+  .stat{padding:26px 24px;border-right:1px solid var(--linea)}
+  .stat:last-child{border-right:0}
+  .stat b{display:block;font-size:34px;font-weight:900;color:var(--amarillo);line-height:1.1}
+  .stat span{font-size:14px;color:var(--tenue)}
+
+  section{padding:78px 0}
+  h2{font-size:clamp(28px,4.4vw,42px);font-weight:900;text-transform:uppercase;letter-spacing:-.5px;line-height:1.1;margin-bottom:34px}
+  h2 .y{color:var(--amarillo)} h2 .r{color:var(--rojo)}
+  .dos{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .serv{background:var(--panel);border:1px solid var(--linea);border-left:6px solid var(--amarillo);padding:36px 36px 32px}
+  .serv.inc{border-left-color:var(--rojo)}
+  .serv h3{font-size:24px;font-weight:800;text-transform:uppercase;margin-bottom:18px}
+  .serv ul{list-style:none;margin-bottom:22px}
+  .serv li{padding:10px 0 10px 22px;border-bottom:1px solid var(--linea);color:#d6dce8;font-size:16px;position:relative}
+  .serv li:before{content:"▸";position:absolute;left:0;color:var(--amarillo)}
+  .serv.inc li:before{color:var(--rojo)}
+  .serv a.sol{font-weight:900;text-transform:uppercase;font-size:15px;color:var(--amarillo)}
+  .serv.inc a.sol{color:var(--rojo)}
+
+  .banda{background:var(--amarillo);color:#111;padding:44px 0}
+  .banda .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+  .banda h2{margin:0;font-size:clamp(26px,4vw,38px)}
+  .banda .ctas{flex-direction:column;min-width:280px}
+
+  .fotoserv{position:relative;height:230px;margin:-36px -36px 24px;background:#0f3160;border-bottom:3px solid var(--amarillo);display:flex;align-items:center;justify-content:center;color:var(--tenue);font-size:13px;font-weight:700;overflow:hidden}
+  .serv.inc .fotoserv{border-bottom-color:var(--rojo)}
+  .fotoserv:before{content:attr(data-ph);position:absolute}
+  .fotoserv img{position:relative;width:100%;height:100%;object-fit:cover;display:block}
+  .intro{color:#c5cddb;font-size:18px;max-width:680px;margin:-14px 0 30px}
+  .tres{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .pv{background:var(--panel);border:1px solid var(--linea);border-top:4px solid var(--amarillo);padding:28px}
+  .pv.inc{border-top-color:var(--rojo)}
+  .pv .n{width:38px;height:38px;border-radius:50%;background:var(--amarillo);color:#111;font-weight:900;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+  .pv.inc .n{background:var(--rojo);color:#0b2545}
+  .pv h3{text-transform:uppercase;font-size:18px;font-weight:800;margin-bottom:8px}
+  .pv p{color:#c5cddb;font-size:15px}
+  .plancta{background:var(--panel);border:1px solid var(--linea);border-left:6px solid var(--amarillo);padding:34px 36px;display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap}
+  .plancta p{color:#c5cddb;max-width:620px;font-size:16px}
+  .plancta .btn{white-space:nowrap}
+
+  .galeria{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .galeria div{background:var(--panel);border:2px dashed #4a72ae;height:170px;display:flex;align-items:center;justify-content:center;text-align:center;padding:12px;font-size:13px;color:var(--tenue)}
+
+  .faq details{background:var(--panel);border:1px solid var(--linea);padding:18px 22px;margin-bottom:10px}
+  .faq summary{font-weight:800;cursor:pointer;text-transform:uppercase;font-size:15px}
+  .faq p{margin-top:10px;color:#c5cddb;font-size:15px}
+
+  .otros{background:var(--panel);border-top:1px solid var(--linea);border-bottom:1px solid var(--linea);padding:40px 0}
+  .otros p{color:var(--tenue);max-width:760px;margin-bottom:16px}
+  .otros a{color:var(--amarillo);font-weight:800;text-transform:uppercase}
+
+  footer{padding:40px 0 100px;color:var(--tenue);font-size:14px}
+  footer b{color:var(--texto)}
+
+  .fab{position:fixed;left:0;right:0;bottom:0;z-index:30;display:none;grid-template-columns:1fr 1fr}
+  .fab a{padding:16px;text-align:center;font-weight:900;text-transform:uppercase;font-size:14px}
+  .fab .c{background:var(--amarillo);color:#111}.fab .w{background:var(--verde);color:#06240f}
+
+  @media(max-width:820px){
+    .stats .wrap{grid-template-columns:1fr 1fr}
+    .stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--linea)}
+    .dos,.tres{grid-template-columns:1fr}
+    .intro{font-size:16px}
+    .plancta{padding:26px 22px}
+    .serv{padding:28px 22px 26px}
+    .fotoserv{margin:-28px -22px 20px;height:200px}
+    .galeria{grid-template-columns:1fr 1fr}
+    .hero{padding:48px 0 56px}
+    .tel-h{display:none}
+    .fab{display:grid}
+    .btn{width:100%}
+    .banda .ctas{min-width:0;width:100%}
+  }
+  /* Dirección C (claro corporativo) — se activa con el botón de arriba o ?tema=claro. Solo para comparar. */
+  body.c{--bg:#fff;--panel:#f4f6f9;--linea:#dfe4ec;--tenue:#4a5568;--rojo:#c62828;background:#fff;color:#1b2430}
+  body.c header{background:#0b2545;color:#fff;border-bottom:0}
+  body.c .hero{background:#fff;color:#1b2430}
+  body.c h1 .y,body.c h2 .y{color:#0b2545;box-shadow:inset 0 -.3em 0 #ffc400}
+  body.c .gran-tel,body.c .nota b,body.c .stat b,body.c .serv a.sol,body.c .otros a{color:#0b2545}
+  body.c .serv li{color:#2d3748}
+  body.c .serv li:before{color:#0b2545}
+  body.c .serv.inc li:before{color:var(--rojo)}
+  body.c .plancta p{color:#4a5568}
+  body.c footer{background:#0b2545;color:#cdd6e4}
+  body.c footer b{color:#fff}
+  .tema{position:fixed;top:12px;right:12px;z-index:60;background:#fff;color:#0b2545;border:2px solid #0b2545;border-radius:99px;padding:7px 14px;font:800 12px/1 inherit;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.3)}
+</style>
+</head>
+<body>
+
+<button class="tema" id="tema" type="button">Ver versión clara (C)</button>
+<script>
+  (function(){var b=document.body,t=document.getElementById('tema');
+    function set(c){b.classList.toggle('c',c);t.textContent=c?'Ver versión azul (B)':'Ver versión clara (C)'}
+    t.addEventListener('click',function(){set(!b.classList.contains('c'))});
+    if(/tema=claro/.test(location.search))set(true);})();
+</script>
+<div class="topbar">⚡ Atención en todo Costa Rica · Respuesta rápida</div>
+<header><div class="wrap">
+  <div class="logo">Electrotecnia <span>C&amp;C</span></div>
+  <a class="tel-h" href="tel:+50687071228">8707-1228</a>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <h1>Generadores <span class="y">que arrancan.</span><br><span class="r">Prevención de incendios.</span></h1>
+  <p class="lead">Mantenimiento y reparación de generadores y sistemas contra incendios. Revisamos a tiempo para que sus equipos respondan el día que los necesita. 40 años de experiencia.</p>
+  <div class="llama">Llámanos al</div>
+  <a class="gran-tel" href="tel:+50687071228">8707-1228</a>
+  <div class="ctas">
+    <a class="btn btn-y" href="tel:+50687071228">📞 Llámanos ahora</a>
+    <a class="btn btn-w" href="https://api.whatsapp.com/send?phone=50687071228&text=Hola%2C%20necesito%20una%20inspecci%C3%B3n%20o%20cotizaci%C3%B3n.">💬 Escríbenos por WhatsApp</a>
+  </div>
+  <p class="nota">Inspección y diagnóstico: <b>₡35.000 + IVA</b> · Lunes a viernes 9:00–17:00</p>
+</div></div>
+
+<div class="peligro"></div>
+<div class="stats"><div class="wrap">
+  <div class="stat"><b>+40</b><span>años de experiencia</span></div>
+  <div class="stat"><b>Todo CR</b><span>cobertura nacional</span></div>
+  <div class="stat"><b>Todas</b><span>las marcas</span></div>
+  <div class="stat"><b>L–V</b><span>9:00 a 17:00</span></div>
+</div></div>
+
+<section id="prevencion" class="claro" style="padding-bottom:60px"><div class="wrap">
+  <h2>Prevenir es <span class="y">estar listo</span></h2>
+  <p class="intro">Un generador o un sistema contra incendios solo importa el día de la emergencia. Nuestro trabajo es que ese día funcionen.</p>
+  <div class="tres">
+    <div class="pv"><div class="n">1</div><h3>Generadores</h3><p>Mantenimiento preventivo para que arranque y tome la carga cuando se va la luz.</p></div>
+    <div class="pv inc"><div class="n">2</div><h3>Contra incendios</h3><p>Pruebas de funcionamiento de bombas y motores para detectar fallas antes de una emergencia.</p></div>
+    <div class="pv"><div class="n">3</div><h3>Plan a la medida</h3><p>Revisiones periódicas según el tipo y la cantidad de equipos que tenga.</p></div>
+  </div>
+</div></section>
+
+<section id="servicios"><div class="wrap">
+  <h2>Nuestros <span class="y">servicios</span></h2>
+  <div class="dos">
+    <div class="serv">
+      <div class="fotoserv" data-ph="FOTO: generador"><img src="assets/generador.jpg" alt="Generador eléctrico con motor dentro de su cabina" loading="lazy" onerror="this.remove()"></div>
+      <h3>Generadores eléctricos</h3>
+      <ul>
+        <li>Mantenimiento preventivo</li>
+        <li>Reparación de toda marca</li>
+        <li>Transferencias análogas y digitales</li>
+        <li>Gasolina, diésel y gas LP</li>
+      </ul>
+      <a class="sol" href="https://api.whatsapp.com/send?phone=50687071228&text=Hola%2C%20quiero%20cotizar%20mantenimiento%20de%20un%20generador.">Solicitar cotización →</a>
+    </div>
+    <div class="serv inc">
+      <div class="fotoserv" data-ph="FOTO: sistema contra incendios"><img src="assets/incendios.jpg" alt="Bomba contra incendios con motor y tuberías rojas en el cuarto de bombas" loading="lazy" onerror="this.remove()"></div>
+      <h3>Sistemas contra incendios</h3>
+      <p style="color:var(--rojo);font-weight:800;text-transform:uppercase;font-size:13px;letter-spacing:.4px;margin:-8px 0 14px">Prevención: que funcione el día que lo necesite</p>
+      <ul>
+        <li>Bombas y motores</li>
+        <li>Pruebas de funcionamiento</li>
+        <li>Inspección y diagnóstico</li>
+        <li>Proyectos y electromecánica</li>
+      </ul>
+      <a class="sol" href="https://api.whatsapp.com/send?phone=50687071228&text=Hola%2C%20quiero%20cotizar%20un%20servicio%20de%20sistemas%20contra%20incendios.">Solicitar cotización →</a>
+    </div>
+  </div>
+</div></section>
+
+<div class="banda"><div class="wrap">
+  <h2>¿Su equipo necesita revisión?</h2>
+  <div class="ctas">
+    <a class="btn btn-k" href="tel:+50687071228">📞 Llámanos 8707-1228</a>
+    <a class="btn btn-w" href="https://api.whatsapp.com/send?phone=50687071228&text=Hola%2C%20necesito%20una%20revisi%C3%B3n%20de%20mi%20equipo.">💬 Escríbenos por WhatsApp</a>
+  </div>
+</div></div>
+
+<section id="como" class="claro" style="padding-top:0;padding-bottom:60px"><div class="wrap">
+  <h2>Cómo <span class="y">trabajamos</span></h2>
+  <div class="tres">
+    <div class="pv"><div class="n">1</div><h3>Nos contacta</h3><p>Por llamada o WhatsApp, y nos cuenta qué equipos tiene.</p></div>
+    <div class="pv"><div class="n">2</div><h3>Inspección y diagnóstico</h3><p>Revisamos el equipo. Costo: ₡35.000 + IVA, incluido en la factura electrónica.</p></div>
+    <div class="pv"><div class="n">3</div><h3>Cotización y plan</h3><p>Le presentamos qué hace falta y, si lo desea, un plan de mantenimiento a su medida.</p></div>
+  </div>
+</div></section>
+
+<section id="planes" style="padding:56px 0"><div class="wrap">
+  <div class="plancta">
+    <div>
+      <h2 style="margin-bottom:10px">Planes de <span class="y">mantenimiento</span></h2>
+      <p>Cada equipo es distinto, así que cada plan se arma según su generador o su sistema contra incendios. Consulte con nosotros.</p>
+    </div>
+    <a class="btn btn-y" href="https://api.whatsapp.com/send?phone=50687071228&text=Hola%2C%20quiero%20consultar%20por%20un%20plan%20de%20mantenimiento%20para%20mis%20equipos.">Consultar nuestros planes →</a>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <h2>Trabajos <span class="y">realizados</span></h2>
+  <div class="galeria">
+    <div>FOTO PENDIENTE: técnico revisando una planta</div>
+    <div>FOTO PENDIENTE: tablero de transferencia</div>
+    <div>FOTO PENDIENTE: bomba contra incendios</div>
+    <div>FOTO PENDIENTE: generador instalado</div>
+  </div>
+</div></section>
+
+<section class="faq claro" style="padding-top:60px;padding-bottom:70px"><div class="wrap">
+  <h2>Preguntas <span class="y">frecuentes</span></h2>
+  <details><summary>¿Qué incluye la inspección y diagnóstico?</summary><p>Cuesta ₡35.000 + IVA y se incluye en la factura electrónica. Fuera de San José se acuerda el costo. Detalle de lo que incluye: por confirmar con el dueño.</p></details>
+  <details><summary>¿Reparan todas las marcas?</summary><p>Sí, reparamos generadores de toda marca, de gasolina, diésel y gas LP.</p></details>
+  <details><summary>¿Atienden fuera de San José?</summary><p>Atendemos en todo Costa Rica. Fuera de San José el costo de la visita se acuerda con usted.</p></details>
+  <details><summary>¿Cuál es el horario?</summary><p>Lunes a viernes de 9:00 a 17:00. Teléfono 8707-1228.</p></details>
+</div></section>
+
+<div class="otros"><div class="wrap">
+  <h2 style="font-size:24px;margin-bottom:12px">Otros <span class="y">servicios</span></h2>
+  <p>También ofrecemos cómputo forense, laptops, compresores y aires acondicionados de vehículos.</p>
+  <a href="https://api.whatsapp.com/send?phone=50687071228&text=Hola%2C%20quiero%20consultar%20por%20otros%20servicios.">Consultar por WhatsApp →</a>
+</div></div>
+
+<footer><div class="wrap">
+  <b>Electrotecnia C&amp;C</b> · Tel. 8707-1228 · Lunes a viernes 9:00–17:00<br>
+  Ubicación y correo: pendientes de confirmar.
+</div></footer>
+
+<div class="fab">
+  <a class="c" href="tel:+50687071228">📞 Llamar</a>
+  <a class="w" href="https://api.whatsapp.com/send?phone=50687071228&text=Hola%2C%20necesito%20una%20cotizaci%C3%B3n.">💬 WhatsApp</a>
+</div>
+
+</body>
+</html>

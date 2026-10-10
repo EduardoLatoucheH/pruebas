@@ -1,0 +1,10 @@
+# Lo que NO se publica (solo se sirve index.html, css/, assets/, robots.txt y sitemap.xml)
+referencia/
+sitio-viejo/
+fotos-originales/
+marca/
+scripts/
+node_modules/
+package.json
+package-lock.json
+ENTREGA.md
