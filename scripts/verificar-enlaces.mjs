@@ -55,6 +55,8 @@ for (const archivo of readdirSync(RAIZ).filter((f) => f.endsWith('.html'))) {
       }
       if (!/target="_blank"/.test(etiqueta) || !/rel="[^"]*noopener[^"]*noreferrer[^"]*"/.test(etiqueta))
         falla(`enlace WhatsApp sin target="_blank" y rel="noopener noreferrer": ${href}`);
+    } else if (href.startsWith('mailto:')) {
+      if (href !== 'mailto:info@electrotecniacyc.com') falla(`mailto incorrecto "${href}"`);
     } else if (href.startsWith('#')) {
       totalAncla++;
       if (!ids.includes(href.slice(1))) falla(`ancla sin destino "${href}"`);

@@ -2,21 +2,18 @@
 // Umbrales: texto normal >= 4.5, texto grande (>=24 px, o >=18.66 px en negrita) y elementos de interfaz >= 3.
 // Si cambiás un color en estilos.css, actualizá también esta tabla.
 const C = {
-  bg: '#0b2545', panel: '#13315c', fotoBg: '#0f3160', marBg: '#16396a',
-  amarillo: '#ffc400', rojo: '#ff6b60', rojoFill: '#c62828', verde: '#25d366', mar: '#8fc1f2',
+  bg: '#0b2545', panel: '#13315c',
+  amarillo: '#ffc400', rojo: '#ff6b60', rojoFill: '#c62828', verde: '#25d366',
   texto: '#eef1f6', tenue: '#b4bfd1', li: '#d6dce8', claro: '#f4f6f9', tinta: '#1b2430', tinta2: '#4a5568',
   navy: '#0b2545', blanco: '#ffffff', negro: '#111111', verdeTxt: '#06240f',
 };
 
 const rgb = (h) => [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16));
-const mezcla = (fg, bg, a) => '#' + rgb(fg).map((v, i) => Math.round(v * a + rgb(bg)[i] * (1 - a)).toString(16).padStart(2, '0')).join('');
 const lum = (h) => {
   const [r, g, b] = rgb(h).map((v) => { v /= 255; return v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4; });
   return 0.2126 * r + 0.7152 * g + 0.0722 * b;
 };
 const ratio = (a, b) => { const [x, y] = [lum(a), lum(b)].sort((p, q) => q - p); return (x + 0.05) / (y + 0.05); };
-
-const pendienteBg = mezcla(C.amarillo, C.panel, 0.14); // chip [PENDIENTE]: amarillo al 14% sobre el panel
 
 // [descripción, texto, fondo, tipo]  tipo: n = texto normal, g = texto grande, ui = elemento de interfaz
 const pares = [
@@ -25,16 +22,12 @@ const pares = [
   ['Texto tenue (subtítulos, notas, menú) sobre fondo', C.tenue, C.bg, 'n'],
   ['Texto tenue sobre panel (stats, tarjetas)', C.tenue, C.panel, 'n'],
   ['Lista de servicios sobre panel', C.li, C.panel, 'n'],
-  ['Lista de servicios sobre tarjeta de barco', C.li, C.marBg, 'n'],
   ['Teléfono gigante / titular amarillo sobre fondo', C.amarillo, C.bg, 'g'],
   ['Cifras amarillas sobre panel (34 px)', C.amarillo, C.panel, 'g'],
   ['Botón/enlace amarillo pequeño sobre panel', C.amarillo, C.panel, 'n'],
   ['Teléfono del encabezado (amarillo) sobre fondo', C.amarillo, C.bg, 'n'],
-  ['Chip [PENDIENTE] amarillo sobre su fondo', C.amarillo, pendienteBg, 'n'],
   ['Rojo (titular) sobre fondo', C.rojo, C.bg, 'g'],
   ['Rojo (etiqueta y "solicitar") sobre panel', C.rojo, C.panel, 'n'],
-  ['Azul claro del barco sobre panel', C.mar, C.panel, 'n'],
-  ['Azul claro del barco sobre inicio del degradado', C.mar, C.marBg, 'n'],
   ['Texto oscuro sobre amarillo (botón Llamar, barra, banda)', C.negro, C.amarillo, 'n'],
   ['Texto verde oscuro sobre verde WhatsApp', C.verdeTxt, C.verde, 'n'],
   ['Amarillo sobre negro (botón de la banda)', C.amarillo, C.negro, 'n'],

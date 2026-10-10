@@ -1,8 +1,8 @@
 /* Electrotecnia C&C — landing v2 (10/10/2026). Dirección B: azul institucional + amarillo de seguridad.
-   Un color por función: amarillo = resaltar y llamar · rojo = incendios · verde = WhatsApp · azul claro (--mar) = solo barco. */
+   Un color por función: amarillo = resaltar y llamar · rojo = incendios · verde = WhatsApp. */
 :root{
   --bg:#0b2545; --panel:#13315c; --linea:#264a7c;
-  --amarillo:#ffc400; --rojo:#ff6b60; --rojo-fill:#c62828; --verde:#25d366; --mar:#8fc1f2;
+  --amarillo:#ffc400; --rojo:#ff6b60; --rojo-fill:#c62828; --verde:#25d366;
   --texto:#eef1f6; --tenue:#b4bfd1;
   --claro:#f4f6f9; --tinta:#1b2430; --tinta-2:#4a5568;
   --e1:8px; --e2:16px; --e3:24px; --e4:40px; --e5:64px; --e6:96px;
@@ -92,25 +92,23 @@ h2 .y{color:var(--amarillo)}
 .pv p{color:var(--tenue);font-size:15px}
 
 /* Servicios */
-.servicios{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--e3);align-items:stretch}
+.servicios{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--e3);align-items:stretch}
 .serv{display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--linea);border-left:6px solid var(--amarillo);padding:var(--e4) var(--e3) var(--e3)}
 .serv.inc{border-left-color:var(--rojo)}
-.serv.mar{border-left-color:var(--mar);background:linear-gradient(180deg,#16396a,var(--panel) 60%)}
 .serv h3{font-size:22px;font-weight:800;text-transform:uppercase;margin-bottom:var(--e2);line-height:1.15}
 .etiqueta{font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.4px;margin:calc(-1 * var(--e1)) 0 14px}
-.inc .etiqueta{color:var(--rojo)} .mar .etiqueta{color:var(--mar)}
+.inc .etiqueta{color:var(--rojo)}
 .serv ul{list-style:none;margin-bottom:var(--e3);flex:1}
 .serv li{padding:10px 0 10px 22px;border-bottom:1px solid var(--linea);color:#d6dce8;font-size:16px;position:relative}
 .serv li:before{content:"▸";position:absolute;left:0;color:var(--amarillo)}
-.inc li:before{color:var(--rojo)} .mar li:before{color:var(--mar)}
-.pendiente{display:inline-block;background:rgba(255,196,0,.14);border:1px dashed var(--amarillo);color:var(--amarillo);font-size:13px;font-weight:700;padding:6px 10px;margin-bottom:var(--e2)}
+.inc li:before{color:var(--rojo)}
 .sol{align-self:flex-start;font-weight:900;text-transform:uppercase;font-size:15px;color:var(--amarillo);padding:6px 0;border-bottom:2px solid currentColor}
-.inc .sol{color:var(--rojo)} .mar .sol{color:var(--mar)}
+.inc .sol{color:var(--rojo)}
 .sol:hover{filter:brightness(1.15)}
 
 /* Fotos y marcadores */
 .foto{margin:calc(-1 * var(--e4)) calc(-1 * var(--e3)) var(--e3);border-bottom:3px solid var(--amarillo);aspect-ratio:3/2;background:#0f3160;overflow:hidden}
-.inc .foto{border-bottom-color:var(--rojo)} .mar .foto{border-bottom-color:var(--mar)}
+.inc .foto{border-bottom-color:var(--rojo)}
 .foto img{width:100%;height:100%;object-fit:cover}
 .foto-vertical img{object-position:50% 62%}
 
@@ -142,7 +140,7 @@ summary{font-weight:800;cursor:pointer;text-transform:uppercase;font-size:15px}
 .otros a{color:var(--amarillo);font-weight:800;text-transform:uppercase;border-bottom:2px solid currentColor}
 footer{padding:var(--e4) 0;color:var(--tenue);font-size:14px}
 footer b{color:var(--texto)}
-footer a{color:var(--amarillo);font-weight:800}
+footer a{color:var(--amarillo);font-weight:800;text-decoration:underline;text-underline-offset:3px}
 
 /* Barra fija en celular */
 .fab{position:fixed;left:0;right:0;bottom:0;z-index:30;display:none;grid-template-columns:1fr 1fr}
