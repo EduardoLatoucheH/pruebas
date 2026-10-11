@@ -61,7 +61,7 @@ h1{font-size:clamp(26px,3.3vw,40px);line-height:1.05;font-weight:900;text-transf
 /* Franja de peligro y cifras */
 .peligro{height:10px;background:repeating-linear-gradient(135deg,var(--amarillo) 0 18px,#111 18px 36px)}
 .stats{background:var(--panel);border-bottom:1px solid var(--linea)}
-.stats ul{list-style:none;display:grid;grid-template-columns:repeat(4,1fr)}
+.stats ul{list-style:none;display:grid;grid-template-columns:repeat(3,1fr)}
 .stats li{padding:12px var(--e3);border-right:1px solid var(--linea)}
 .stats li:last-child{border-right:0}
 .stats b{display:block;font-size:26px;font-weight:900;color:var(--amarillo);line-height:1.15}
@@ -163,6 +163,7 @@ footer a{color:var(--amarillo);font-weight:800;text-decoration:underline;text-un
   .stats li{padding:10px var(--e2)}
     .stats li:nth-child(2){border-right:0}
   .stats li:nth-child(-n+2){border-bottom:1px solid var(--linea)}
+  .stats li:nth-child(3){grid-column:1 / -1}
   section{padding:28px 0}
   .tres{grid-template-columns:1fr;gap:10px}
   .pv{padding:12px 14px}
