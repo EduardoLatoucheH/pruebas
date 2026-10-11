@@ -67,3 +67,8 @@ La página ya está preparada para ese dominio (canonical, `og:url`, `og:image`,
 - **Corregido:** "Llamá al" (vos) en la descripción para compartir; la descripción pasó de 175 a 144 caracteres para que no se corte; H1 y "plantas eléctricas" que faltaban; el texto de otros servicios ahora es una lista.
 - **No se escribió:** garantías, 24/7, "inmediato", certificaciones, marcas autorizadas ni superlativos. El sitio actual dice "soluciones técnicas inmediatas" y "garantizan su total satisfacción"; no se copió.
 - **Repetible:** `npm run lenguaje` revisa 12 reglas (título, descripción, H1, registro, afirmaciones, precio, palabras clave, terminología, WhatsApp, legibilidad, idioma).
+
+## Reseñas de Google (11/10/2026)
+`api/resenas.mjs` lee el perfil con Places API (New) y la página muestra las 3 reseñas de 5 estrellas más recientes de las que Google devuelve (máximo 5, elegidas por Google; no es "las últimas 3 del perfil" garantizado). Sin llave la sección queda oculta.
+Variables de entorno en Vercel (Settings → Environment Variables): `GOOGLE_PLACES_API_KEY` (obligatoria; restringida a Places API (New)) y `GOOGLE_PLACE_ID` (opcional; si falta, la función busca el perfil por nombre y ubicación). Después de crearlas hay que redesplegar.
+La CSP pasó de `connect-src 'none'` a `connect-src 'self'` solo para llamar a `/api/resenas`; la llave nunca llega al navegador.
