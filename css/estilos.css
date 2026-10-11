@@ -123,7 +123,6 @@ h2 .y{color:var(--amarillo)}
 .resena-autor{color:var(--tenue);font-size:14px}
 .resena-autor b,.resena-autor a{color:var(--texto);font-weight:800}
 .resena-autor a{text-decoration:underline;text-underline-offset:3px}
-.atrib{margin-top:12px;font-size:13px;color:var(--tenue)}
 
 /* Preguntas frecuentes */
 details{background:var(--panel);border:1px solid var(--linea);padding:12px 18px;margin:0 auto 6px;max-width:760px}
