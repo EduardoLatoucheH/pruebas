@@ -1,6 +1,6 @@
 /* Electrotecnia C&C — landing v3 compacta (10/10/2026). Dirección B: azul institucional + amarillo de seguridad.
    Un color por función: amarillo = resaltar y llamar · rojo = incendios · verde = WhatsApp.
-   Compacta a propósito: la página mide unas 2,5 pantallas en escritorio. */
+   Todo el contenido va centrado (hero en una columna). */
 :root{
   --bg:#0b2545; --panel:#13315c; --linea:#264a7c;
   --amarillo:#ffc400; --rojo:#ff6b60; --verde:#25d366;
@@ -28,7 +28,6 @@ header{background:var(--bg);border-bottom:1px solid var(--linea);position:sticky
 .logo{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.5px;font-size:15px;text-transform:uppercase;white-space:nowrap}
 .logo img{width:48px;height:48px;border-radius:50%;flex:none}
 header nav ul{display:flex;flex-wrap:wrap;justify-content:center;gap:0 var(--e3);list-style:none}
-[hidden]{display:none !important}
 header nav a{display:block;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.4px;color:var(--tenue);padding:10px 2px;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
 header nav a:hover{color:var(--texto);border-bottom-color:var(--amarillo)}
 .tel-h{border:2px solid var(--amarillo);color:var(--amarillo);font-weight:800;padding:9px 18px;font-size:15px;white-space:nowrap;transition:background .15s,color .15s}
@@ -170,7 +169,7 @@ footer a{color:var(--amarillo);font-weight:800;text-decoration:underline;text-un
   .hero .ctas{display:none} /* la barra fija de abajo ya trae Llamar y WhatsApp */
   .stats ul{grid-template-columns:1fr 1fr}
   .stats li{padding:10px var(--e2)}
-    .stats li:nth-child(2){border-right:0}
+  .stats li:nth-child(2){border-right:0}
   .stats li:nth-child(-n+2){border-bottom:1px solid var(--linea)}
   .stats li:nth-child(3){grid-column:1 / -1}
   section{padding:28px 0}
