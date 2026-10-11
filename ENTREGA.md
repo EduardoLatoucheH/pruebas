@@ -69,4 +69,7 @@ La página ya está preparada para ese dominio (canonical, `og:url`, `og:image`,
 - **Repetible:** `npm run lenguaje` revisa 12 reglas (título, descripción, H1, registro, afirmaciones, precio, palabras clave, terminología, WhatsApp, legibilidad, idioma).
 
 ## Reseñas de Google (11/10/2026)
-Las 3 reseñas de 5 estrellas más recientes están escritas a mano en `index.html` (sección `#opiniones`), copiadas del perfil el 11/10/2026 con nombre, texto y fecha tal como las mostraba Google. Las fechas ("hace un mes") no se actualizan solas: revisar y refrescar cada cierto tiempo. Pendiente: confirmación del dueño para mostrar los nombres. Se descartó Places API (requiere Google Cloud con facturación); si se retoma, está en el commit `9698607`.
+Las 3 reseñas de 5 estrellas más recientes están escritas a mano en `index.html` (sección `#opiniones`), copiadas del perfil el 11/10/2026 con nombre, texto y fecha tal como las mostraba Google. Las fechas ("hace un mes") no se actualizan solas: revisar y refrescar cada cierto tiempo. El dueño pidió mostrarlas (11/10/2026). Se descartó Places API (requiere Google Cloud con facturación); si se retoma, está en el commit `9698607`.
+
+## Foto de Línea amarilla (11/10/2026)
+`fotos-originales/linea-amarilla/retroexcavadora.jpg`: "John Deere 110 Backhoe" de Rob Melendez, Wikimedia Commons, dominio público (https://commons.wikimedia.org/wiki/File:John_Deere_110_Backhoe.jpg). No requiere atribución. Se reemplazó una foto de Magnific por no tener licencia clara. Idealmente se cambia por una foto real de un equipo del cliente.

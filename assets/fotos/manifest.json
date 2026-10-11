@@ -76,15 +76,15 @@
       "1600": 1200
     }
   },
-  "linea-amarilla-retroexcavadora": {
+  "linea-amarilla-maquinaria-pesada": {
     "grupo": "linea-amarilla",
-    "original": "retroexcavadora.png",
-    "w": 1004,
-    "h": 866,
+    "original": "maquinaria-pesada.jpg",
+    "w": 2816,
+    "h": 1880,
     "anchos": {
-      "480": 414,
-      "960": 828,
-      "1004": 866
+      "480": 320,
+      "960": 641,
+      "1600": 1068
     }
   }
 }

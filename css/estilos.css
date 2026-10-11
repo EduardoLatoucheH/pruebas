@@ -65,7 +65,8 @@ h1{font-size:clamp(26px,3.3vw,40px);line-height:1.05;font-weight:900;text-transf
 .stats li{padding:12px var(--e3);border-right:1px solid var(--linea)}
 .stats li:last-child{border-right:0}
 .stats b{display:block;font-size:26px;font-weight:900;color:var(--amarillo);line-height:1.15}
-.stats span{font-size:13px;color:var(--tenue)}
+.stats span{display:block;font-size:13px;color:var(--tenue);text-wrap:balance}
+.stats .hora{white-space:nowrap}
 
 /* Secciones y titulares */
 section{padding:36px 0}
@@ -99,7 +100,7 @@ h2 .y{color:var(--amarillo)}
 .inc .etiqueta{color:var(--rojo)}
 .serv ul{list-style:none;margin-bottom:14px;flex:1}
 .serv li{padding:5px 0;border-bottom:1px solid var(--linea);color:#d6dce8;font-size:15px;position:relative}
-.serv.lin .etiqueta{flex:1;color:var(--amarillo);margin:0 0 16px}
+.serv.lin .etiqueta{flex:1;display:flex;align-items:center;justify-content:center;color:var(--amarillo);margin:0 0 16px}
 .sol{align-self:center;font-weight:900;text-transform:uppercase;font-size:14px;color:var(--amarillo);padding:4px 0;border-bottom:2px solid currentColor}
 .inc .sol{color:var(--rojo)}
 .sol:hover{filter:brightness(1.15)}
