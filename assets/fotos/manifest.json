@@ -75,5 +75,16 @@
       "960": 720,
       "1600": 1200
     }
+  },
+  "linea-amarilla-retroexcavadora": {
+    "grupo": "linea-amarilla",
+    "original": "retroexcavadora.png",
+    "w": 1004,
+    "h": 866,
+    "anchos": {
+      "480": 414,
+      "960": 828,
+      "1004": 866
+    }
   }
 }

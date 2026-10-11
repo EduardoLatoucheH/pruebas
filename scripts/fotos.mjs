@@ -10,7 +10,7 @@ import { fileURLToPath } from 'node:url';
 const RAIZ = join(dirname(fileURLToPath(import.meta.url)), '..');
 const ORIGEN = join(RAIZ, 'fotos-originales');
 const DESTINO = join(RAIZ, 'assets', 'fotos');
-const GRUPOS = ['generadores', 'incendios', 'trabajos', 'barco'];
+const GRUPOS = ['generadores', 'incendios', 'trabajos', 'barco', 'linea-amarilla'];
 const ANCHOS = [480, 960, 1600];
 const EXT = new Set(['.jpg', '.jpeg', '.png', '.webp', '.tiff']);
 const MINIMO_GRANDE = 1600; // las fotos principales deberían tener al menos este ancho
