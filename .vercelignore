@@ -1,10 +1,12 @@
 # Lo que NO se publica (solo se sirve index.html, css/, assets/, robots.txt y sitemap.xml)
-referencia/
-sitio-viejo/
-fotos-originales/
-marca/
-scripts/
-node_modules/
-package.json
-package-lock.json
-ENTREGA.md
+# Cada regla lleva "/" al inicio para que aplique SOLO a la raíz del proyecto.
+# Sin la barra, "marca/" también excluía assets/marca/ (el logo) y daba 404 en producción.
+/referencia/
+/sitio-viejo/
+/fotos-originales/
+/marca/
+/scripts/
+/node_modules/
+/package.json
+/package-lock.json
+/ENTREGA.md

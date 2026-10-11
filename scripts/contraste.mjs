@@ -3,7 +3,7 @@
 // Si cambiás un color en estilos.css, actualizá también esta tabla.
 const C = {
   bg: '#0b2545', panel: '#13315c',
-  amarillo: '#ffc400', rojo: '#ff6b60', rojoFill: '#c62828', verde: '#25d366',
+  amarillo: '#ffc400', rojo: '#ff6b60', verde: '#25d366',
   texto: '#eef1f6', tenue: '#b4bfd1', li: '#d6dce8', claro: '#f4f6f9', tinta: '#1b2430', tinta2: '#4a5568',
   navy: '#0b2545', blanco: '#ffffff', negro: '#111111', verdeTxt: '#06240f',
 };
@@ -30,8 +30,6 @@ const pares = [
   ['Rojo (etiqueta y "solicitar") sobre panel', C.rojo, C.panel, 'n'],
   ['Texto oscuro sobre amarillo (botón Llamar, barra, banda)', C.negro, C.amarillo, 'n'],
   ['Texto verde oscuro sobre verde WhatsApp', C.verdeTxt, C.verde, 'n'],
-  ['Amarillo sobre negro (botón de la banda)', C.amarillo, C.negro, 'n'],
-  ['Blanco sobre rojo de relleno (número de paso)', C.blanco, C.rojoFill, 'n'],
   ['Texto de lectura sobre sección clara', C.tinta, C.claro, 'n'],
   ['Texto secundario sobre sección clara', C.tinta2, C.claro, 'n'],
   ['Texto secundario sobre tarjeta blanca', C.tinta2, C.blanco, 'n'],

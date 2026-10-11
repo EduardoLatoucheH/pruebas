@@ -9,7 +9,7 @@ const TEL = 'tel:+50687071228';
 const WA_BASE = 'https://api.whatsapp.com/send?phone=50687071228&text=';
 
 const errores = [];
-let totalTel = 0, totalWa = 0, totalAncla = 0, totalImg = 0, totalSrcset = 0;
+let totalPublicados = 0, totalTel = 0, totalWa = 0, totalAncla = 0, totalImg = 0, totalSrcset = 0;
 const pendientes = [];
 const estricto = process.argv.includes('--estricto'); // npm run publicar: los pendientes también hacen fallar
 
@@ -117,7 +117,25 @@ const ORIGEN = 'https://electrotecniacyc.com';
   }
 }
 
-console.log(`Revisado: ${totalTel} tel:, ${totalWa} WhatsApp, ${totalAncla} anclas internas, ${totalImg} imágenes, ${totalSrcset} archivos de srcset.`);
+// Lo que se publica: ningún archivo que use la página puede quedar excluido por .vercelignore (daría 404 en producción)
+{
+  const rutaIgnore = join(RAIZ, '.vercelignore');
+  const reglas = existsSync(rutaIgnore)
+    ? readFileSync(rutaIgnore, 'utf8').split('\n').map((l) => l.trim()).filter((l) => l && !l.startsWith('#')) : [];
+  const ignorado = (ruta) => reglas.some((r) => {
+    const patron = r.replace(/^\//, '').replace(/\/$/, '');
+    const segmentos = ruta.split('/');
+    return r.startsWith('/') ? (ruta === patron || ruta.startsWith(patron + '/')) : segmentos.includes(patron);
+  });
+  const idx = readFileSync(join(RAIZ, 'index.html'), 'utf8');
+  const usados = new Set();
+  for (const m of idx.matchAll(/\s(?:src|href)="([^"#]+)"/g)) if (!/^(https?:|mailto:|tel:|\/\/)/.test(m[1])) usados.add(m[1]);
+  for (const m of idx.matchAll(/\ssrcset="([^"]+)"/g)) for (const p of m[1].split(',')) usados.add(p.trim().split(/\s+/)[0]);
+  for (const m of idx.matchAll(/https:\/\/electrotecniacyc\.com\/([^"\s<]+)/g)) usados.add(m[1]);
+  for (const ruta of usados) if (ignorado(ruta)) errores.push(`.vercelignore excluye "${ruta}", que la página usa (daría 404 en producción)`);
+  totalPublicados = usados.size;
+}
+console.log(`Revisado: ${totalTel} tel:, ${totalWa} WhatsApp, ${totalAncla} anclas internas, ${totalImg} imágenes, ${totalSrcset} archivos de srcset, ${totalPublicados} archivos publicados que .vercelignore no excluye.`);
 if (pendientes.length) {
   console.log(`\n${estricto ? '✗' : '⚠'} ${pendientes.length} pendiente(s) antes de publicar:`);
   for (const p of pendientes) console.log('  - ' + p);
