@@ -53,7 +53,9 @@ h1{font-size:clamp(26px,3.3vw,40px);line-height:1.05;font-weight:900;text-transf
 .ctas{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
 /* Ficha de precio y pago: un solo dato destacado (el costo), lo demás en segundo plano */
 .ficha{max-width:560px;margin:40px auto 0;padding-top:24px;border-top:1px solid var(--linea)}
+.ficha h3{font-size:15px;font-weight:800;text-transform:uppercase;letter-spacing:.4px;margin-bottom:12px}
 .ficha p{font-size:14px;line-height:1.6;color:var(--tenue);text-wrap:balance}
+.ficha p+p{margin-top:8px}
 .ficha .precio{font-size:18px;font-weight:700;color:var(--texto);margin:6px 0}
 .ficha .precio b{color:var(--amarillo)}
 .nota-priv{font-size:13px;color:var(--tenue);margin:0 auto;max-width:46ch}
@@ -138,6 +140,7 @@ summary{font-weight:800;cursor:pointer;text-transform:uppercase;font-size:14px}
 footer{background:var(--panel);border-top:1px solid var(--linea);padding:28px 0;color:var(--tenue);font-size:14px}
 .pie{display:grid;grid-template-columns:1fr 1fr;gap:var(--e4);align-items:start}
 .pie h2{font-size:15px;letter-spacing:.5px;color:var(--amarillo);margin-bottom:10px}
+.pie .lema{font-style:italic;color:var(--texto);margin-bottom:10px}
 .pie p{margin-bottom:6px;max-width:62ch;margin-left:auto;margin-right:auto}
 .pie ul{list-style:none;display:grid;grid-template-columns:1fr;gap:0;margin:6px auto 10px;max-width:420px}
 .pie li{padding:2px 0;border-bottom:1px solid var(--linea)}
