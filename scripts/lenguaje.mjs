@@ -127,6 +127,18 @@ const anotar = (estado, regla, detalle) => resultados.push({ estado, regla, deta
   else anotar('PASA', 'Idioma y región', 'lang="es-CR" y og:locale es_CR');
 }
 
+// 12. Un renglón por frase (pedido del dueño, 11/10/2026): después de cada punto, la frase siguiente va en otro renglón
+// (un <br> o un bloque aparte). Se exceptúan las reseñas de Google (citas textuales) y abreviaturas como "Dr." o "Tel.".
+{
+  const sinResenas = cuerpo.replace(/<p class="resena-txt">[\s\S]*?<\/p>/gi, ' ');
+  const lineas = decodificar(sinResenas.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>|<svg[\s\S]*?<\/svg>|<!--[\s\S]*?-->/gi, ' ')
+    .replace(/<br\s*\/?>/gi, '\n').replace(/<\/(p|h[1-6]|li|summary|div|section|details|footer|header|article|nav|ul)>/gi, '\n').replace(/<[^>]+>/g, ' '))
+    .split('\n').map((l) => l.replace(/\b(Dr|Dra|Sr|Sra|Tel|Ing|Lic)\.\s/g, '$1§ ').replace(/\s+/g, ' ').trim());
+  const juntas = lineas.filter((l) => /[.!?]\s+[A-ZÁÉÍÓÚÑ¿¡“"]/.test(l));
+  if (juntas.length) anotar('FALLA', 'Un renglón por frase', `${juntas.length} bloque(s) con frases seguidas en el mismo renglón: "${juntas[0].slice(0, 70)}…"`);
+  else anotar('PASA', 'Un renglón por frase', 'después de cada punto, la frase siguiente va en otro renglón');
+}
+
 const icono = { PASA: '✓', AVISO: '⚠', FALLA: '✗' };
 for (const r of resultados) console.log(`${icono[r.estado]} ${r.estado.padEnd(5)} ${r.regla.padEnd(36)} ${r.detalle}`);
 const fallas = resultados.filter((r) => r.estado === 'FALLA').length, avisos = resultados.filter((r) => r.estado === 'AVISO').length;
