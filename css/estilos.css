@@ -154,8 +154,48 @@ footer a{color:var(--amarillo);font-weight:800;text-decoration:underline;text-un
 .fab .w{background:var(--verde);color:#06240f}
 
 @media(min-width:961px){
-  .hero-grid{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:var(--e4);align-items:center;justify-items:stretch}
+  .hero-grid{grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:var(--e4);align-items:center;justify-items:stretch}
   .hero-foto{max-width:none;aspect-ratio:4/3}
+}
+/* Escritorio: tipografía más grande (12/10/2026). El celular no cambia. */
+@media(min-width:961px){
+  .wrap{max-width:1240px}
+  .topbar{font-size:15px;padding:9px 12px}
+  .logo{font-size:17px}
+  .logo-sub{font-size:12px}
+  .tel-h{font-size:17px}
+  .eyebrow{font-size:clamp(13px,1.35vw,17px)}
+  h1{font-size:clamp(30px,3.1vw,44px)}
+  .hero .lead{font-size:20px;max-width:640px}
+  .llama{font-size:15px}
+  .gran-tel{font-size:clamp(52px,6vw,78px)}
+  .btn{font-size:16px;padding:15px 26px;min-height:54px}
+  .stats b{font-size:32px}
+  .stats span{font-size:15px}
+  h2{font-size:clamp(28px,3.2vw,40px)}
+  .etiqueta{font-size:13px}
+  .serv h3{font-size:22px}
+  .serv li{font-size:17px}
+  .sol{font-size:16px}
+  .ficha h3{font-size:17px}
+  .ficha p{font-size:16px}
+  .ficha .precio{font-size:21px}
+  .nota-priv,.ficha .nota-priv{font-size:15px}
+  .pv h3{font-size:17px}
+  .pv p{font-size:16px}
+  .resena-txt{font-size:17px}
+  .resena-autor{font-size:15px}
+  .estrellas{font-size:24px}
+  summary{font-size:16px}
+  .faq-p{font-size:16px}
+  footer{font-size:16px}
+  .pie h2{font-size:17px}
+}
+@media(min-width:961px) and (max-width:1199px){
+  h1{font-size:clamp(28px,3.4vw,40px)}
+  .gran-tel{font-size:clamp(46px,5.2vw,62px)}
+  .hero .lead{font-size:18px}
+  .btn{font-size:14px;padding:13px 18px;min-height:50px}
 }
 @media(max-width:960px){
   .servicios{grid-template-columns:1fr}
