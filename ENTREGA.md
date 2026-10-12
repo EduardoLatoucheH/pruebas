@@ -31,7 +31,7 @@ La página ya está preparada para ese dominio (canonical, `og:url`, `og:image`,
 
 ### Lo que encontré en el sitio actual (verificado el 10/10/2026)
 - WordPress con Yoast. Canonical: `https://electrotecniacyc.com/` (https, sin `www`); `www` responde 301 a ese.
-- Título: "Electrotecnia C&C - Mantenimiento plantas electricas San José Costa Rica". Se conserva igual, solo con tilde en "eléctricas".
+- Título: "Electrotecnia C&C - Mantenimiento plantas electricas San José Costa Rica". Se conserva idéntico, incluso sin tilde en "electricas" (11/10/2026: el dueño quiere mantener exactamente el título que ya posiciona).
 - Mapa del sitio: `/sitemap_index.xml`. Contacto: `/?page_id=1550`.
 - El DNS está en **InMotion Hosting** (`ns1/ns2.inmotionhosting.com`). Sitio y correo viven en `70.39.248.148`.
 - **El correo depende del dominio:** el MX es `electrotecniacyc.com` (el propio dominio) y `mail.electrotecniacyc.com` es un CNAME al dominio. Si el dominio se apunta a Vercel sin tocar eso, **`info@electrotecniacyc.com` deja de recibir correo**.
