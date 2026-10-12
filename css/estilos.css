@@ -170,7 +170,8 @@ footer a{color:var(--amarillo);font-weight:800;text-decoration:underline;text-un
   .tel-h{display:none}
   .hero{padding:22px 0 28px}
   h1{font-size:clamp(24px,7vw,32px)}
-  .gran-tel{font-size:clamp(44px,12.5vw,56px)}
+  .gran-tel{font-size:clamp(44px,12.5vw,56px);margin-bottom:0}
+  .hero-grid{gap:var(--e2)}
   .hero .lead{font-size:16px}
   .btn{width:100%}
   .hero .ctas{display:none} /* la barra fija de abajo ya trae Llamar y WhatsApp */
