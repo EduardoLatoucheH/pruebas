@@ -76,15 +76,15 @@
       "1600": 1200
     }
   },
-  "linea-amarilla-maquinaria-pesada": {
+  "linea-amarilla-equipos-patio": {
     "grupo": "linea-amarilla",
-    "original": "maquinaria-pesada.jpg",
-    "w": 2816,
-    "h": 1880,
+    "original": "equipos-patio.jpg",
+    "w": 1600,
+    "h": 1200,
     "anchos": {
-      "480": 320,
-      "960": 641,
-      "1600": 1068
+      "480": 360,
+      "960": 720,
+      "1600": 1200
     }
   }
 }

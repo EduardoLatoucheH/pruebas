@@ -81,7 +81,7 @@ h2 .y{color:var(--amarillo)}
 .claro summary{color:#0b2545}
 
 /* Pasos */
-.tres{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.tres{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .pv{background:var(--panel);border:1px solid var(--linea);border-top:4px solid var(--amarillo);padding:16px 18px}
 .pv .n{width:30px;height:30px;border-radius:50%;background:var(--amarillo);color:#111;font-weight:900;display:flex;align-items:center;justify-content:center;margin:0 auto 8px}
 .pv h3{text-transform:uppercase;font-size:15px;font-weight:800;margin-bottom:4px}

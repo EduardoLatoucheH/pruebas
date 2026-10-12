@@ -79,8 +79,9 @@ const anotar = (estado, regla, detalle) => resultados.push({ estado, regla, deta
 // 7. Cobertura de palabras clave
 {
   const t = sinTildes(visible + ' ' + titulo + ' ' + descripcion);
-  const criticas = ['mantenimiento preventivo', 'reparacion', 'generadores electricos', 'plantas electricas', 'plantas de emergencia',
-    'sistemas contra incendios', 'bombas', 'transferencias', 'inspeccion y diagnostico', 'planes de mantenimiento', 'san jose', 'hatillo', 'costa rica', '40 anos'];
+  // 11/10/2026: el dueño pidió textos más cortos (tarjetas de generadores e incendios); se retiraron 'plantas de emergencia', 'bombas' y 'transferencias'.
+  const criticas = ['mantenimientos preventivos', 'reparacion', 'generadores electricos', 'plantas electricas',
+    'sistemas contra incendios', 'pruebas hidrostaticas', 'inspeccion y diagnostico', 'planes de mantenimiento', 'san jose', 'hatillo', 'costa rica', '40 anos'];
   const secundarias = ['computo forense', 'recuperacion de datos', 'laptops', 'compresores', 'aire acondicionado'];
   const faltaC = criticas.filter((k) => !t.includes(k)), faltaS = secundarias.filter((k) => !t.includes(k));
   if (faltaC.length) anotar('FALLA', 'Palabras clave (servicios y lugar)', `faltan: ${faltaC.join(', ')}`);

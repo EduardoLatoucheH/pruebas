@@ -72,4 +72,4 @@ La página ya está preparada para ese dominio (canonical, `og:url`, `og:image`,
 Las 3 reseñas de 5 estrellas más recientes están escritas a mano en `index.html` (sección `#opiniones`), copiadas del perfil el 11/10/2026 con nombre, texto y fecha tal como las mostraba Google. Las fechas ("hace un mes") no se actualizan solas: revisar y refrescar cada cierto tiempo. El dueño pidió mostrarlas (11/10/2026). Se descartó Places API (requiere Google Cloud con facturación); si se retoma, está en el commit `9698607`.
 
 ## Foto de Línea amarilla (11/10/2026)
-`fotos-originales/linea-amarilla/retroexcavadora.jpg`: "John Deere 110 Backhoe" de Rob Melendez, Wikimedia Commons, dominio público (https://commons.wikimedia.org/wiki/File:John_Deere_110_Backhoe.jpg). No requiere atribución. Se reemplazó una foto de Magnific por no tener licencia clara. Idealmente se cambia por una foto real de un equipo del cliente.
+Foto real enviada por el dueño (`fotos-originales/linea-amarilla/equipos-patio.jpg`): camión Mack, tractor CAT D4C y excavadora. Reemplaza la foto de stock anterior. Se ven las marcas Mack y CAT; no se afirma ninguna autorización (ver pendiente 7).
